@@ -113,19 +113,34 @@ herName = "Rita Rossweisse"
 
 # # # Set # #  
 
-ritaDataSets = {"Rita Rossweisse", "Great Britain", 1998, 25, 25}
-print(ritaDataSets)                                                     # only store unique data, no duplicates
-ritaDataSets.add(168)
-print(ritaDataSets)
-ritaAccurateDataSets = {"Rita Rossweisse", "Great Britain", 1998, 25, 56, 168}
-ritaDataSets.update(ritaAccurateDataSets)
-print(ritaDataSets)
-ritaDataSets.discard(56)
-print(ritaDataSets)
+# ritaDataSets = {"Rita Rossweisse", "Great Britain", 1998, 25, 25}
+# print(ritaDataSets)                                                     # only store unique data, no duplicates
+# ritaDataSets.add(168)
+# print(ritaDataSets)
+# ritaAccurateDataSets = {"Rita Rossweisse", "Great Britain", 1998, 25, 56, 168}
+# ritaDataSets.update(ritaAccurateDataSets)
+# print(ritaDataSets)
+# ritaDataSets.discard(56)
+# print(ritaDataSets)
 
-for ritaDataSet in ritaDataSets:
-    print(ritaDataSet)
+# for ritaDataSet in ritaDataSets:
+#     print(ritaDataSet)
 
-honkaiHerrschers = {"Herrscher of Flamescion", "Herrscher of Reason", "Herrshcer of Thunder"}
-honkaiHerrscherss = {"Herrscher of Finality",  "Herrscher of Truth", "Herrscher of Origin"}
-print(honkaiHerrschers | honkaiHerrscherss)             # OR print(honkaiHerrschers.union(honkaiHerrscherss))
+# honkaiHerrschers = {"Herrscher of Flamescion", "Herrscher of Reason", "Herrshcer of Thunder"}
+# honkaiHerrscherss = {"Herrscher of Finality",  "Herrscher of Truth", "Herrscher of Origin"}
+# print(honkaiHerrschers | honkaiHerrscherss)             # OR print(honkaiHerrschers.union(honkaiHerrscherss))
+
+
+
+# # # Selection in Python # #
+
+ritaAge = 25
+myAge = 21
+if(ritaAge > myAge): 
+    print("She's older than you")
+elif(ritaAge < myAge):
+    print("You're older than her")
+elif(ritaAge == myAge):
+    print("Both of you are at the same age")
+else: 
+    print("idk lol")
