@@ -134,13 +134,51 @@ herName = "Rita Rossweisse"
 
 # # # Selection in Python # #
 
-ritaAge = 25
-myAge = 21
-if(ritaAge > myAge): 
-    print("She's older than you")
-elif(ritaAge < myAge):
-    print("You're older than her")
-elif(ritaAge == myAge):
-    print("Both of you are at the same age")
-else: 
-    print("idk lol")
+# ritaAge = 25
+# myAge = 21
+# if(ritaAge > myAge): 
+#     print("She's older than you")
+# elif(ritaAge < myAge):
+#     print("You're older than her")
+# elif(ritaAge == myAge):
+#     print("Both of you are at the same age")
+# else: 
+#     print("idk lol")
+
+
+
+
+# # # For loop Repetition # #
+
+def repetition() :
+    for i in range(5):
+        print(i," * 2 =", (i*2))
+
+repetition()
+
+print("\n")
+
+def jumpRep():
+    for i in range(1, 10, 2):   #It will starts at the first parameter(1), ends at 2nd parameter(10), increment by using the 3rd parameter(2)
+        print(i)
+jumpRep()
+
+
+
+# # # While Loop Repetition # #
+
+def main():
+    sentinel = 1
+
+    while(sentinel==1):
+        response = input("When is Rita Rossweisse's birthday? ")
+        if(response == "1st of March"):
+            sentinel = sentinel + 1
+main()
+
+def optionalSentinel():
+    sentinel = 1
+
+    while(sentinel == 1):
+        sentinel = eval(input("Enter 1 to keep repeating this loop, 0 to exit : "))
+optionalSentinel()
