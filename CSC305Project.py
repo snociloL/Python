@@ -1,11 +1,7 @@
 # Need to implement concept of List and function
 # Data Dictionary
 
-tableNum = 0
-profit = 0.00
-response = 0
-confirm = ""
-loop = ""
+
 foodLists = {'Tom Yunk Campur': 12.9, 'Siakap 2+1 Rasa' : 27.5, 'Ikan Merapu Stim Aq' : 30.0, 'Mee Goreng Ayum' : 7.8, 'Udang Goreng Tepunk': 6.0}
 drinkLists = ['Pen Pineapple Apple Juice', 'Soy Bean Milk','Aiyar Ping', 'Chocola Milk', 'Fresh Milk']
 def printMenu():
@@ -70,42 +66,50 @@ def orderMenu(code):
         else:
             print("\tWrong Input!!")
 
-while (response != 4):
-    print("\n\t~~~~~~~~~~~~~~~~~~~~~ Menu Page ~~~~~~~~~~~~~~~~~~~~~")
-    print("\n\t Command Codes : \n\t(1) Order - To set a customer order. \n\t(2) Profit - To check total earnings. \n\t(3) Top - To see customer's favorite order and all menu. \n\t(4) To exit.")
-    response = eval(input("\n\tInput = "))
+def main():
+    tableNum = 0
+    profit = 0.00
+    response = 0
+    confirm = ""
+    loop = ""
+    while (response != 4):
+        print("\n\t~~~~~~~~~~~~~~~~~~~~~ Menu Page ~~~~~~~~~~~~~~~~~~~~~")
+        print("\n\t Command Codes : \n\t(1) Order - To set a customer order. \n\t(2) Profit - To check total earnings. \n\t(3) Top - To see customer's favorite order and all menu. \n\t(4) To exit.")
+        response = eval(input("\n\tInput = "))
 
-    if response == 1:
-        print("\t\nCustomer Order(s) : -")
-        print("\t================================================================")   
-        tableNum = int(input("\n\t Insert table number = "))
-        while(loop != "No"):
-            code = eval(input("\n\tInsert item code = "))
-            orderMenu(code)
-            loop = str(input("\tAdd another order? (Yes/No) = "))
-            
-        confirm = str(input("\tConfirm Order? (Yes/No) = "))
-        if(confirm == "No"):
-            listOrder.clear()
-            total = 0.0
+        if response == 1:
+            print("\t\nCustomer Order(s) : -")
+            print("\t================================================================")   
+            tableNum = int(input("\n\t Insert table number = "))
+            while(loop != "No"):
+                code = eval(input("\n\tInsert item code = "))
+                orderMenu(code)
+                loop = str(input("\tAdd another order? (Yes/No) = "))
+                
+            confirm = str(input("\tConfirm Order? (Yes/No) = "))
+            if(confirm == "No"):
+                listOrder.clear()
+                total = 0.0
 
-        print("\n\tTable Number = ", tableNum)
-        print("\n\tList of order = ")
-        printOrder()
-        total = calcTotalOrder()
-        profit = profit + total
-        print("\n\tTotal of order = RM", total)
+            print("\n\tTable Number = ", tableNum)
+            print("\n\tList of order = ")
+            printOrder()
+            total = calcTotalOrder()
+            profit = profit + total
+            print("\n\tTotal of order = RM", total)
 
-    elif response == 2:
-        print("\n\t~~~~~~~~~~~~~~~~~~~~~ Current Profit ~~~~~~~~~~~~~~~~~~~~~")
-        print("\tTotal profits : RM"+str(profit))
-    elif response == 3:
-        print("\n\t~~~~~~~~~~~~~~~~~~~~~ Signature Menu ~~~~~~~~~~~~~~~~~~~~")
-        print("\tIkan Merapu Stim Aq = RM30.00")
-        print("\n\t~~~~~~~~~~~~~~~~~~~~~ All Menu ~~~~~~~~~~~~~~~~~~~~")
-        printMenu()
+        elif response == 2:
+            print("\n\t~~~~~~~~~~~~~~~~~~~~~ Current Profit ~~~~~~~~~~~~~~~~~~~~~")
+            print("\tTotal profits : RM"+str(profit))
+        elif response == 3:
+            print("\n\t~~~~~~~~~~~~~~~~~~~~~ Signature Menu ~~~~~~~~~~~~~~~~~~~~")
+            print("\tIkan Merapu Stim Aq = RM30.00")
+            print("\n\t~~~~~~~~~~~~~~~~~~~~~ All Menu ~~~~~~~~~~~~~~~~~~~~")
+            printMenu()
 
-    elif response == 4:
-        print("\n\t~~~~~~~~~~~~~~~~~~~~~ Thank you for the hard work ~~~~~~~~~~~~~~~~~~~~")
-    else:
-        print("ERROR!! Unknown Command")
+        elif response == 4:
+            print("\n\t~~~~~~~~~~~~~~~~~~~~~ Thank you for the hard work ~~~~~~~~~~~~~~~~~~~~")
+        else:
+            print("ERROR!! Unknown Command")
+
+main()
