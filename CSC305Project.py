@@ -57,7 +57,7 @@ def orderMenu(code):
             price.append(7.5)
         elif code == 8:
             listOrder.append("Fresh Milk  RM 3.00")
-            print("\tfresh Milk  RM 3.00")
+            print("\tFresh Milk  RM 3.00")
             price.append(3.0)
         elif code == 9:
             listOrder.append("Pen Pineapple Apple Juice  RM 5.00")
@@ -87,6 +87,7 @@ while (response != 4):
         confirm = str(input("\tConfirm Order? (Yes/No) = "))
         if(confirm == "No"):
             listOrder.clear()
+            total = 0.0
 
         print("\n\tTable Number = ", tableNum)
         print("\n\tList of order = ")
