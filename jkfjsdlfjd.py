@@ -99,6 +99,8 @@ herName = "Rita Rossweisse"
 #     print(honkaiChara)
 
 # print(len(honkaiCharas))
+# print("\n\t Total of Charges : RM{0:0.2f}".format(total))          # formatting the price into 2 decimal points
+
 
 
 
