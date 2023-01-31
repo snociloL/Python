@@ -97,5 +97,5 @@ while (request != "No"):
     day = int(input("\nPlease insert total days of rental :"))
     itemCode = str(input("\nPlease insert item code (D/W):"))
     total = canopyCharges(participantCode, totalCanopies, day) + additionalCharges(itemCode)
-    print("\n\t Total of Charges : RM", total)
+    print("\n\t Total of Charges : RM{0:0.2f}".format(total)) # formatting the price into 2 decimal points
     request = str(input("\n\nContinue program? (Yes/No) : "))
